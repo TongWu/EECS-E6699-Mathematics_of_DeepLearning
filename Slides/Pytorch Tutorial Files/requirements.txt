@@ -1,0 +1,38 @@
+Setting up python:
+1. Install Anaconda
+2. Install git (if it is not there already) : https://github.com/git-guides/install-git
+3. a) Download the GitHub repository for the class into a directory that you will use for the class.
+% git clone https://github.com/alizaree/PytorchTut.git
+   b) Download the audio files from coursework in the directory that you will use for the class. Unzip. 
+4. use Conda to create an environment for the class:
+In the terminal, go to the directory and you will now create a python environment for the class
+with all the python packages that we’ll be using.
+(To understand more about what this is doing:
+https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html. )
+There is a “.yml” file in the directory called “make_datamovies_env.yml”
+You can run it with this command and it will create and setup the environment and its
+dependencies: from terminal cd to the directory of GitHub by the command <<cd ./PytorchTut>> then run the condo common below:
+% conda env create -f make_PytorchTut_env.yml
+That will take a little while and there will be lots of action in the window...
+5. Now to activate the environment and start using the notebooks, there are two ways:
+a. In the terminal type:
+% conda activate PytorchTut
+Run this command first in anaconda prompt
+
+%conda install -c numba numba
+
+and then
+
+%conda install -c conda-forge librosa
+then Install pytorch and dependancies use the command below in the activated environment:
+conda install pytorch torchvision torchaudio cpuonly -c pytorch
+pip install h5py
+
+Then
+Start Jupiter lab:
+% jupyterlab
+OR
+b. Go to your applications and open the Anaconda Navigator, and you’ll see a list of
+environments on the main page.. pick Pytorchtut from the list and it should have Jupyterlab
+already installed. Launch that!
+And open the first notebook !
